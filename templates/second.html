@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Друга сторінка{% endblock %}
+
+{% block content %}
+<h1>Друга сторінка</h1>
+<p>Привіт, <strong>{{ name }}</strong>!</p>
+<p>Тут можна передати параметр так: <code>?name=щось</code></p>
+
+<p>Спробуй інші імена:</p>
+<ul>
+    <li><a href="{% url 'second' %}?name=Олеже">Привіт, Олеже!</a></li>
+    <li><a href="{% url 'second' %}?name=Маріє">Привіт, Маріє</a></li>
+</ul>
+
+<p style="margin-top: 30px;">
+    <a href="{% url 'main' %}">Повернутися на головну сторінку</a>
+    |
+    <a href="{% url 'weather' %}">Подивитися погоду в Одесі</a>
+</p>
+
+{% endblock %}

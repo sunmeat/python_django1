@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Погода в Одесі{% endblock %}
+
+{% block content %}
+<h1>Погода в Одесі зараз</h1>
+
+    {% if error %}
+<p style="color: red;">Помилка: {{ error }}</p>
+    {% else %}
+<p><strong>Температура:</strong> {{ temp }} °C</p>
+<p><strong>Вологість:</strong> {{ humidity }} %</p>
+<p><strong>Вітер:</strong> {{ wind }} км/год</p>
+<p><strong>Стан:</strong> {{ conditions }}</p>
+<p><strong>Оновлено:</strong> {{ time_update }}</p>
+    {% endif %}
+
+{% endblock %}
